@@ -1,15 +1,9 @@
-// Copyright (c) 2014 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 document.getElementById("clickMe").onclick = doNothing;
 
 function getStatus(number, callback, failedCallBack) {
-  console.log( encodeURIComponent(number))
   var url = 'http://api.railwayapi.com/live/train/' + encodeURIComponent(number) + '/doj/' + getDateString() + '/apikey/gudkl9973/';
-    var x = new XMLHttpRequest();
+  var x = new XMLHttpRequest();
   x.open('GET', url);
-  // The Google image search API responds with JSON, so let Chrome parse it.
   x.responseType = 'json';
   x.onload = function() {
     var response = x.response;
