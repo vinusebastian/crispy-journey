@@ -1,7 +1,8 @@
 document.getElementById("clickMe").onclick = doNothing;
 
 function getStatus(number, callback, failedCallBack) {
-  var url = 'http://api.railwayapi.com/live/train/' + encodeURIComponent(number) + '/doj/' + getDateString() + '/apikey/gudkl9973/';
+  var apiKey = "xxxxx";
+  var url = 'http://api.railwayapi.com/live/train/' + encodeURIComponent(number) + '/doj/' + getDateString() + '/apikey/' + apiKey +'/';
   var x = new XMLHttpRequest();
   x.open('GET', url);
   x.responseType = 'json';
